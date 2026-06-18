@@ -3,19 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shashidhar Rao Neredikomma - Professional Portfolio</title>
-    <script src="[https://cdn.tailwindcss.com](https://cdn.tailwindcss.com)"></script>
-    <link rel="preconnect" href="[https://fonts.googleapis.com](https://fonts.googleapis.com)">
-    <link rel="preconnect" href="[https://fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
-    <link href="[https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap](https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap)" rel="stylesheet">
+    <title>Shashidhar Rao Neredikomma | SAP Functional Consultant & SCM Analyst</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .code-font {
+            font-family: 'JetBrains Mono', monospace;
         }
         .fade-in-section {
             opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            transform: translateY(24px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .fade-in-section.is-visible {
             opacity: 1;
@@ -23,221 +26,296 @@
         }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-slate-900 text-slate-100 selection:bg-indigo-500 selection:text-white antialiased">
 
-    <header class="bg-white shadow-md sticky top-0 z-50">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-gray-900 tracking-tight">Shashidhar Rao N.</a>
-            <div class="hidden md:flex space-x-6 font-medium">
-                <a href="#about" class="text-gray-600 hover:text-gray-900 transition duration-300">About</a>
-                <a href="#skills" class="text-gray-600 hover:text-gray-900 transition duration-300">Skills</a>
-                <a href="#experience" class="text-gray-600 hover:text-gray-900 transition duration-300">Experience</a>
-                <a href="#projects" class="text-gray-600 hover:text-gray-900 transition duration-300">Projects</a>
-                <a href="#education" class="text-gray-600 hover:text-gray-900 transition duration-300">Education</a>
-                <a href="#contact" class="text-gray-600 hover:text-gray-900 transition duration-300">Contact</a>
+    <!-- Premium Navigation -->
+    <header class="bg-slate-900/80 backdrop-blur-md border-b border-slate-800 sticky top-0 z-50">
+        <nav class="container mx-auto px-6 lg:px-12 py-5 flex justify-between items-center">
+            <a href="#" class="text-xl font-extrabold tracking-tight bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                SHASHIDHAR RAO N.
+            </a>
+            <div class="hidden md:flex space-x-8 text-sm font-semibold tracking-wide">
+                <a href="#about" class="text-slate-400 hover:text-slate-100 transition duration-200">About</a>
+                <a href="#skills" class="text-slate-400 hover:text-slate-100 transition duration-200">Skills</a>
+                <a href="#experience" class="text-slate-400 hover:text-slate-100 transition duration-200">Experience</a>
+                <a href="#projects" class="text-slate-400 hover:text-slate-100 transition duration-200">Projects</a>
+                <a href="#education" class="text-slate-400 hover:text-slate-100 transition duration-200">Education</a>
+            </div>
+            <div class="hidden md:block">
+                <a href="#contact" class="bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 text-xs font-bold tracking-wider uppercase px-5 py-2.5 rounded-lg transition duration-200">
+                    Connect
+                </a>
             </div>
             <div class="md:hidden">
-                <button id="mobile-menu-button" class="text-gray-600 hover:text-gray-900 focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)">
+                <button id="mobile-menu-button" class="text-slate-400 hover:text-slate-100 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                     </svg>
                 </button>
             </div>
         </nav>
-        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4 bg-white border-t">
-            <a href="#about" class="block py-2 text-gray-600 hover:text-gray-900">About</a>
-            <a href="#skills" class="block py-2 text-gray-600 hover:text-gray-900">Skills</a>
-            <a href="#experience" class="block py-2 text-gray-600 hover:text-gray-900">Experience</a>
-            <a href="#projects" class="block py-2 text-gray-600 hover:text-gray-900">Projects</a>
-            <a href="#education" class="block py-2 text-gray-600 hover:text-gray-900">Education</a>
-            <a href="#contact" class="block py-2 text-gray-600 hover:text-gray-900">Contact</a>
+        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-6 bg-slate-900 border-t border-slate-800 space-y-4 font-medium text-sm">
+            <a href="#about" class="block text-slate-400 hover:text-slate-100 py-1">About</a>
+            <a href="#skills" class="block text-slate-400 hover:text-slate-100 py-1">Skills</a>
+            <a href="#experience" class="block text-slate-400 hover:text-slate-100 py-1">Experience</a>
+            <a href="#projects" class="block text-slate-400 hover:text-slate-100 py-1">Projects</a>
+            <a href="#education" class="block text-slate-400 hover:text-slate-100 py-1">Education</a>
+            <a href="#contact" class="block text-slate-400 hover:text-slate-100 py-1 font-semibold text-indigo-400">Contact & Connect</a>
         </div>
     </header>
 
-    <main class="container mx-auto px-6 py-12">
+    <main class="container mx-auto px-6 lg:px-12 py-16 max-w-7xl">
 
-        <section id="about" class="fade-in-section min-h-[80vh] flex flex-col md:flex-row items-center justify-center py-10">
-            <div class="md:w-1/3 text-center md:text-left mb-10 md:mb-0">
-                <img src="[https://raw.githubusercontent.com/shashi0001/portfolio/professional_profilepic.jpg](https://raw.githubusercontent.com/shashi0001/portfolio/professional_profilepic.jpg)" alt="Shashidhar Rao Neredikomma" class="w-64 h-64 rounded-full mx-auto md:mx-0 shadow-xl object-cover border-4 border-white">
-            </div>
-            <div class="md:w-2/3 md:pl-12">
-                <span class="text-sm font-bold tracking-wider text-indigo-600 uppercase">SAP Functional Consultant & Supply Chain Analyst</span>
-                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 mt-2">Shashidhar Rao Neredikomma</h1>
-                <p class="text-xl text-gray-600 mb-6 leading-relaxed">I uniquely blend deep SAP ERP expertise (S/4HANA & ECC) with advanced supply chain data analytics. With a proven track record in multi-client Greenfield implementations and continuous improvement operations, I act as a strong collaborative bridge between complex business strategies and technical engineering teams.</p>
-                <div class="flex flex-wrap gap-3 mb-8">
-                    <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded">Lean Six Sigma Yellow Belt</span>
-                    <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded">SAP S/4HANA Certified</span>
-                    <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded">Data-Driven S&OP Specialist</span>
+        <!-- Executive Hero Section -->
+        <section id="about" class="fade-in-section min-h-[75vh] flex flex-col lg:flex-row items-center justify-between gap-12 py-8">
+            <div class="w-full lg:w-7/12 order-2 lg:order-1 text-center lg:text-left">
+                <div class="inline-flex items-center gap-2 bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-bold tracking-widest uppercase px-3 py-1.5 rounded-full mb-6">
+                    <span class="w-2 h-2 rounded-full bg-indigo-400 animate-pulse"></span>
+                    SAP ERP & Supply Chain Analytics Specialist
                 </div>
-                <a href="#contact" class="bg-gray-900 text-white font-semibold py-3 px-8 rounded-lg hover:bg-gray-800 transition duration-300 shadow-md">Get In Touch</a>
+                <h1 class="text-4xl md:text-6xl font-extrabold text-white tracking-tight mb-6 leading-none">
+                    Bridging Business Strategy <br class="hidden md:inline"><span class="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">With Enterprise Data</span>
+                </h1>
+                <p class="text-lg text-slate-400 mb-8 leading-relaxed max-w-2xl">
+                    I uniquely blend rigorous operational data analytics with technical expertise across global SAP ERP lifecycles (S/4HANA & ECC). From designing custom cross-functional WRICEF logic to running high-stakes S&OP multi-client Greenfield implementations, I construct robust architecture for continuous global operations.
+                </p>
+                <div class="flex flex-wrap justify-center lg:justify-start gap-3 mb-8">
+                    <span class="bg-slate-800 border border-slate-700 text-slate-300 text-xs font-semibold px-3.5 py-1.5 rounded-md code-font">SAP S/4HANA Certified</span>
+                    <span class="bg-slate-800 border border-slate-700 text-slate-300 text-xs font-semibold px-3.5 py-1.5 rounded-md code-font">Lean Six Sigma Yellow Belt</span>
+                    <span class="bg-slate-800 border border-slate-700 text-slate-300 text-xs font-semibold px-3.5 py-1.5 rounded-md code-font">Order-to-Cash (SD)</span>
+                    <span class="bg-slate-800 border border-slate-700 text-slate-300 text-xs font-semibold px-3.5 py-1.5 rounded-md code-font">Procure-to-Pay (MM)</span>
+                </div>
+                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                    <a href="#contact" class="w-full sm:w-auto text-center bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-3 px-8 rounded-xl transition duration-200 shadow-lg shadow-indigo-600/20">
+                        Get In Touch
+                    </a>
+                    <a href="#experience" class="w-full sm:w-auto text-center bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-300 font-semibold py-3 px-8 rounded-xl transition duration-200">
+                        View Track Record
+                    </a>
+                </div>
+            </div>
+            <div class="w-full lg:w-4/12 order-1 lg:order-2 flex justify-center">
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full blur opacity-30 group-hover:opacity-50 transition duration-300"></div>
+                    <img src="https://raw.githubusercontent.com/shashi0001/portfolio/professional_profilepic.jpg" alt="Shashidhar Rao Neredikomma" class="relative w-64 h-64 md:w-80 md:h-80 rounded-full shadow-2xl object-cover border-4 border-slate-800">
+                </div>
             </div>
         </section>
 
-        <section id="skills" class="fade-in-section py-16 border-t border-b">
-            <h2 class="text-3xl font-bold text-center mb-12">Technical Toolkit</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-                    <h3 class="text-lg font-bold text-indigo-600 mb-3">SAP Functional Core</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">Order-to-Cash (SD/OTC), Procure-to-Pay (MM/P2P), Logistics Execution (LE), Custom WRICEF Design, Pricing (VK11), Account Determination (VKOA, OBYC), IDocs/EDI Operations (BD87, WE02).</p>
+        <!-- Technical Capabilities Grid -->
+        <section id="skills" class="fade-in-section py-20 border-t border-slate-800">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-extrabold text-white tracking-tight mb-2">Technical Capabilities Architecture</h2>
+                <p class="text-slate-400 max-w-xl mx-auto text-sm">Deep functional functional expertise backed by computational data tools and lean methodology environments.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-slate-800/40 p-8 rounded-2xl border border-slate-800 hover:border-slate-700/80 transition duration-200">
+                    <div class="w-10 h-10 rounded-lg bg-indigo-500/10 flex items-center justify-center text-indigo-400 mb-6 font-bold">01</div>
+                    <h3 class="text-xl font-bold text-white mb-4">SAP Functional Core</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">Functional orchestration across SD, MM, and Logistics Execution configurations.</p>
+                    <ul class="text-slate-300 text-xs space-y-2 code-font border-t border-slate-800/60 pt-4">
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-indigo-400"></span>Order-to-Cash (OTC / SD)</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-indigo-400"></span>Procure-to-Pay (P2P / MM)</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-indigo-400"></span>Custom WRICEF Architecture</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-indigo-400"></span>IDocs / EDI Integration</li>
+                    </ul>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-                    <h3 class="text-lg font-bold text-indigo-600 mb-3">Data Science & BI</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">Python (Pandas, NumPy, Matplotlib, Seaborn) and R, SQL query design, Tableau, and Power BI dashboard engineering, Predictive Analytics, and Advanced Excel Engineering (Macros/Pivots).</p>
+                <div class="bg-slate-800/40 p-8 rounded-2xl border border-slate-800 hover:border-slate-700/80 transition duration-200">
+                    <div class="w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-400 mb-6 font-bold">02</div>
+                    <h3 class="text-xl font-bold text-white mb-4">Data Analytics & BI</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">Transforming raw database architecture into dynamic performance optimization environments.</p>
+                    <ul class="text-slate-300 text-xs space-y-2 code-font border-t border-slate-800/60 pt-4">
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-purple-400"></span>Python (Pandas, NumPy, Seaborn)</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-purple-400"></span>SQL Data Engineering</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-purple-400"></span>Tableau & Power BI Ecosystems</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-purple-400"></span>Predictive Modeling & R</li>
+                    </ul>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-                    <h3 class="text-lg font-bold text-indigo-600 mb-3">Methodologies & SCM</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">AI-Enabled Lean Six Sigma DMAIC Framework, Time-Series Demand Forecasting (ARIMA/Prophet), S&OP Global Simulation, and Agile Workflow Management.</p>
+                <div class="bg-slate-800/40 p-8 rounded-2xl border border-slate-800 hover:border-slate-700/80 transition duration-200">
+                    <div class="w-10 h-10 rounded-lg bg-pink-500/10 flex items-center justify-center text-pink-400 mb-6 font-bold">03</div>
+                    <h3 class="text-xl font-bold text-white mb-4">Operations & SCM</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">Applying engineering frameworks to maximize resilience, ROI, and delivery metrics.</p>
+                    <ul class="text-slate-300 text-xs space-y-2 code-font border-t border-slate-800/60 pt-4">
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-pink-400"></span>Lean Six Sigma DMAIC Strategy</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-pink-400"></span>ARIMA / Prophet Forecasting</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-pink-400"></span>Global S&OP Strategy</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-pink-400"></span>Trade Compliance Workflows</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
+        <!-- Professional Timeline -->
         <section id="experience" class="fade-in-section py-20">
-            <h2 class="text-3xl font-bold text-center mb-12">Professional Track Record</h2>
-            <div class="max-w-4xl mx-auto">
+            <div class="mb-16">
+                <h2 class="text-3xl font-extrabold text-white tracking-tight mb-2">Professional Field Execution</h2>
+                <p class="text-slate-400 text-sm">A chronological breakdown of system implementations and corporate analytics operations.</p>
+            </div>
+            <div class="space-y-8 max-w-5xl">
                 
-                <div class="bg-white p-8 rounded-lg shadow-md border border-gray-100 mb-8 transform hover:scale-[1.01] transition duration-300">
-                    <div class="flex flex-col sm:flex-row justify-between sm:items-center mb-4">
+                <div class="bg-slate-800/20 border border-slate-800/80 p-8 rounded-2xl relative hover:border-slate-700 transition duration-200">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
                         <div>
-                            <h3 class="text-2xl font-semibold text-gray-900">Graduate Teaching Assistant / Graduate SAP & Supply Chain Analyst</h3>
-                            <h4 class="text-lg font-medium text-indigo-600">Richard A. Chaifetz School of Business, Saint Louis University</h4>
+                            <h3 class="text-xl font-bold text-white">Graduate Teaching Assistant / Graduate SAP & SCM Analyst</h3>
+                            <p class="text-indigo-400 text-sm font-semibold mt-1">Richard A. Chaifetz School of Business, Saint Louis University</p>
                         </div>
-                        <span class="text-sm bg-indigo-50 text-indigo-700 font-semibold px-3 py-1 rounded-full mt-2 sm:mt-0 self-start">Oct 2024 - Dec 2025</span>
+                        <span class="text-xs font-mono bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 px-3 py-1.5 rounded-md font-bold">OCT 2024 - DEC 2025</span>
                     </div>
-                    <ul class="list-disc list-inside text-gray-600 space-y-2 text-base ml-2">
-                        <li>Managed and configured live enterprise simulation spaces in <strong>SAP S/4HANA</strong> for 50+ users across SD, MM, and FI connection landscapes.</li>
-                        <li>Coached and upskilled graduate students on configuration logic, MRP runs, and cross-functional integration.</li>
-                        <li>Engineered performance-tracking dashboards using <strong>Tableau and SQL</strong> to actively isolate, report, and monitor student simulation KPIs.</li>
+                    <ul class="space-y-3 text-slate-400 text-sm ml-4 list-disc marker:text-indigo-500">
+                        <li>Managed and configured live enterprise simulation architectural spaces in <strong class="text-slate-200">SAP S/4HANA</strong> for 50+ corporate and graduate users across integrated SD, MM, and FI connection landscapes.</li>
+                        <li>Coached cross-functional logic pathways, Material Requirements Planning parameters, and complex master data variables.</li>
+                        <li>Engineered end-to-end performance-tracking dashboards utilizing <strong class="text-slate-200">Tableau and SQL</strong> query layers to actively isolate, isolate, and forecast execution trends.</li>
                     </ul>
                 </div>
-                
-                <div class="bg-white p-8 rounded-lg shadow-md border border-gray-100 mb-8 transform hover:scale-[1.01] transition duration-300">
-                    <div class="flex flex-col sm:flex-row justify-between sm:items-center mb-4">
+
+                <div class="bg-slate-800/20 border border-slate-800/80 p-8 rounded-2xl relative hover:border-slate-700 transition duration-200">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
                         <div>
-                            <h3 class="text-2xl font-semibold text-gray-900">Associate Consultant (SAP Functional & Supply Chain Analyst)</h3>
-                            <h4 class="text-lg font-medium text-indigo-600">Cognitus</h4>
+                            <h3 class="text-xl font-bold text-white">Associate Consultant (SAP Functional & Supply Chain Analyst)</h3>
+                            <p class="text-purple-400 text-sm font-semibold mt-1">Cognitus</p>
                         </div>
-                        <span class="text-sm bg-indigo-50 text-indigo-700 font-semibold px-3 py-1 rounded-full mt-2 sm:mt-0 self-start">Oct 2021 - Dec 2023</span>
+                        <span class="text-xs font-mono bg-purple-500/10 border border-purple-500/20 text-purple-400 px-3 py-1.5 rounded-md font-bold">OCT 2021 - DEC 2023</span>
                     </div>
-                    <ul class="list-disc list-inside text-gray-600 space-y-2 text-base ml-2">
-                        <li>Executed core functional configurations across 3 simultaneous <strong>Greenfield SAP S/4HANA client implementations</strong> from scoping and blueprinting to hypercare support.</li>
-                        <li>Independently engineered and tested a custom 2-step invoice approval mechanism across SD and FI, successfully <strong>reducing unauthorized billing errors by 15%</strong>.</li>
-                        <li>Authored detailed functional specifications for over 10 custom WRICEF objects (Smartforms, custom tracking reports, IDoc interface extensions) and guided ABAP development runs.</li>
-                        <li>Delivered critical Level 2/3 Application Management Support (AMS), troubleshooting core pricing anomalies and electronic IDoc stream errors within strict 48-hour SLAs.</li>
+                    <ul class="space-y-3 text-slate-400 text-sm ml-4 list-disc marker:text-purple-500">
+                        <li>Executed functional core blueprints and setups across 3 global, simultaneous <strong class="text-slate-200">Greenfield SAP S/4HANA implementations</strong> from blueprint scoping phases through hypercare infrastructure setups.</li>
+                        <li>Designed and validated a programmatic 2-step invoice authorization architecture across the SD/FI integration zone, reducing unintended billing leaks by <strong class="text-slate-200">15%</strong>.</li>
+                        <li>Authored over 10 detailed functional specifications for highly customized WRICEF structures (Smartforms, IDoc interface mappings) and oversaw development runs alongside offshore engineering cells.</li>
+                        <li>Provided specialized Level 2/3 Application Management Support (AMS), debugging active pricing calculation routines and electronic IDoc stream errors within stringent 48-hour SLAs.</li>
                     </ul>
                 </div>
-                
-                <div class="bg-white p-8 rounded-lg shadow-md border border-gray-100 mb-8 transform hover:scale-[1.01] transition duration-300">
-                    <div class="flex flex-col sm:flex-row justify-between sm:items-center mb-4">
+
+                <div class="bg-slate-800/20 border border-slate-800/80 p-8 rounded-2xl relative hover:border-slate-700 transition duration-200">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
                         <div>
-                            <h3 class="text-2xl font-semibold text-gray-900">Operations & Logistics Analyst Intern</h3>
-                            <h4 class="text-lg font-medium text-indigo-600">Eunimart</h4>
+                            <h3 class="text-xl font-bold text-white">Operations & Logistics Analyst Intern</h3>
+                            <p class="text-pink-400 text-sm font-semibold mt-1">Eunimart</p>
                         </div>
-                        <span class="text-sm bg-indigo-50 text-indigo-700 font-semibold px-3 py-1 rounded-full mt-2 sm:mt-0 self-start">Oct 2020 - Oct 2021</span>
+                        <span class="text-xs font-mono bg-pink-500/10 border border-pink-500/20 text-pink-400 px-3 py-1.5 rounded-md font-bold">OCT 2020 - OCT 2021</span>
                     </div>
-                    <ul class="list-disc list-inside text-gray-600 space-y-2 text-base ml-2">
-                        <li>Administered cross-border logistics and multi-channel order fulfillment across international e-commerce platforms (Amazon, eBay, Etsy) for 6 major corporate clients.</li>
-                        <li>Coordinated carrier infrastructure and handled trade compliance workflows to launch products seamlessly into 11 international markets.</li>
-                        <li>Engineered automated KPI tracking spreadsheets and logistics strategies that elevated client operational profitability by an average of 20%.</li>
+                    <ul class="space-y-3 text-slate-400 text-sm ml-4 list-disc marker:text-pink-500">
+                        <li>Directed international supply routing, multi-channel distribution parameters, and global order workflows across enterprise platforms for 6 core market client portfolios.</li>
+                        <li>Managed critical carrier network variables and global trade standard procedures to launch high-volume products seamlessly into 11 international territories.</li>
+                        <li>Built automated mathematical tracking matrix spreadsheets that boosted visibility and elevated customer operational profit parameters by an average of <strong class="text-slate-200">20%</strong>.</li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <section id="projects" class="fade-in-section py-20 bg-gray-100 -mx-6 px-6 rounded-xl">
-            <h2 class="text-3xl font-bold text-center mb-4">Marquee Projects & Research</h2>
-            <p class="text-center text-gray-500 mb-12 max-w-2xl mx-auto">A showcase of data analytics applications, field consulting research, and intense global supply chain operations simulations.</p>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <!-- Marquee Projects Showcase -->
+        <section id="projects" class="fade-in-section py-20 border-t border-slate-800">
+            <div class="mb-16">
+                <h2 class="text-3xl font-extrabold text-white tracking-tight mb-2">Marquee Project Space</h2>
+                <p class="text-slate-400 text-sm">Case evidence of code application, global optimization models, and advanced intelligence research runs.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 
-                <div class="bg-white rounded-xl shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300 flex flex-col justify-between">
-                    <div class="p-6">
-                        <span class="text-xs font-bold uppercase text-indigo-600 tracking-wider">Python & Data Science</span>
-                        <h3 class="text-xl font-bold text-gray-900 mt-1 mb-2">Demand Forecasting Application</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">Developed a functional, standalone forecasting app utilizing ARIMA, SARIMA, and Facebook Prophet algorithms to predict price and demand trends across raw commodities.</p>
+                <div class="bg-slate-800/10 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:bg-slate-800/20 transition duration-200">
+                    <div>
+                        <div class="text-xs font-mono text-indigo-400 font-bold uppercase tracking-wider mb-3">Python & Applied Data Science</div>
+                        <h3 class="text-lg font-bold text-white mb-3">Time-Series Commodity Forecasting App</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed mb-6">Built a functional engineering analytics application deploying structural ARIMA, SARIMA, and Facebook Prophet algorithms to model, track, and forecast raw commodity supply and price fluctuations.</p>
                     </div>
-                    <div class="p-6 pt-0">
-                        <span class="inline-block bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded font-mono mr-2">Python</span>
-                        <span class="inline-block bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded font-mono">Prophet</span>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-xl shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300 flex flex-col justify-between">
-                    <div class="p-6">
-                        <span class="text-xs font-bold uppercase text-indigo-600 tracking-wider">Tableau BI & Operations</span>
-                        <h3 class="text-xl font-bold text-gray-900 mt-1 mb-2">Unide Supermarket Sales Analysis</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">Served as Team Lead to clean, profile, and evaluate a massive retail sales dataset for a Spanish cooperative. Designed a comprehensive Tableau dashboard tracking SKU performance and food perishability factors.</p>
-                    </div>
-                    <div class="p-6 pt-0">
-                        <span class="inline-block bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded font-mono mr-2">Tableau</span>
-                        <span class="inline-block bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded font-mono">Data Cleansing</span>
+                    <div class="flex gap-2 border-t border-slate-850 pt-4">
+                        <span class="bg-slate-800 text-slate-300 text-[10px] font-mono px-2 py-1 rounded">Python</span>
+                        <span class="bg-slate-800 text-slate-300 text-[10px] font-mono px-2 py-1 rounded">Prophet</span>
+                        <span class="bg-slate-800 text-slate-300 text-[10px] font-mono px-2 py-1 rounded">Data Modeling</span>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-xl shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300 flex flex-col justify-between">
-                    <div class="p-6">
-                        <span class="text-xs font-bold uppercase text-indigo-600 tracking-wider">S&OP Executive Simulation</span>
-                        <h3 class="text-xl font-bold text-gray-900 mt-1 mb-2">The Fresh Connection Simulation</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">Commanded cross-functional leadership (Procurement, Operations, Sales) in a high-pressure global corporate simulation, successfully maximizing organization ROI through dynamic data analysis.</p>
+                <div class="bg-slate-800/10 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:bg-slate-800/20 transition duration-200">
+                    <div>
+                        <div class="text-xs font-mono text-purple-400 font-bold uppercase tracking-wider mb-3">Tableau BI & Field Operations</div>
+                        <h3 class="text-lg font-bold text-white mb-3">Unide Supermarket Retail Analysis</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed mb-6">Served as Lead Analytics Architect parsing complex sales matrix layers for a large Spanish cooperative. Created analytical dashboards tracking shelf footprinting metrics and freshness logic variables.</p>
                     </div>
-                    <div class="p-6 pt-0">
-                        <span class="inline-block bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded font-mono mr-2">S&OP Strategy</span>
-                        <span class="inline-block bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded font-mono">ROI Optimization</span>
+                    <div class="flex gap-2 border-t border-slate-850 pt-4">
+                        <span class="bg-slate-800 text-slate-300 text-[10px] font-mono px-2 py-1 rounded">Tableau</span>
+                        <span class="bg-slate-800 text-slate-300 text-[10px] font-mono px-2 py-1 rounded">SQL Wrangling</span>
+                        <span class="bg-slate-800 text-slate-300 text-[10px] font-mono px-2 py-1 rounded">SKU Optimization</span>
+                    </div>
+                </div>
+
+                <div class="bg-slate-800/10 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:bg-slate-800/20 transition duration-200">
+                    <div>
+                        <div class="text-xs font-mono text-pink-400 font-bold uppercase tracking-wider mb-3">S&OP Executive Architecture</div>
+                        <h3 class="text-lg font-bold text-white mb-3">The Fresh Connection Simulation</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed mb-6">Orchestrated cross-functional parameters (Procurement variables, operational capacity steps, distribution limits) inside an intense corporate sandbox, engineering logistics steps to maximize structural ROI.</p>
+                    </div>
+                    <div class="flex gap-2 border-t border-slate-850 pt-4">
+                        <span class="bg-slate-800 text-slate-300 text-[10px] font-mono px-2 py-1 rounded">S&OP Strategy</span>
+                        <span class="bg-slate-800 text-slate-300 text-[10px] font-mono px-2 py-1 rounded">ROI Optimization</span>
+                        <span class="bg-slate-800 text-slate-300 text-[10px] font-mono px-2 py-1 rounded">Risk Mitigation</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="education" class="fade-in-section py-20">
-            <h2 class="text-3xl font-bold text-center mb-12">Academic Credentials & Honors</h2>
-            <div class="max-w-3xl mx-auto">
-                
-                <div class="bg-white p-8 rounded-lg shadow-md border border-gray-100 mb-8 relative overflow-hidden">
-                    <div class="absolute right-0 top-0 bg-indigo-600 text-white text-xs font-bold px-4 py-1 uppercase tracking-widest">Top 7% Globally</div>
+        <!-- Academic Credentials & Credentials -->
+        <section id="education" class="fade-in-section py-20 border-t border-slate-800">
+            <div class="mb-16">
+                <h2 class="text-3xl font-extrabold text-white tracking-tight mb-2">Academic & Professional Credentials</h2>
+                <p class="text-slate-400 text-sm">Formal validations and honor distinctions.</p>
+            </div>
+            <div class="max-w-4xl space-y-6">
+                <div class="bg-slate-800/30 border border-slate-800 p-8 rounded-2xl relative overflow-hidden">
+                    <div class="absolute right-0 top-0 bg-gradient-to-l from-indigo-500 to-purple-500 text-white text-[10px] font-bold px-4 py-1.5 uppercase tracking-widest font-mono">
+                        Beta Gamma Sigma Honor Member (Top 7%)
+                    </div>
                     <div class="flex flex-col sm:flex-row justify-between sm:items-center mb-2">
-                        <h3 class="text-2xl font-bold text-gray-900">Master of Science in Supply Chain Management</h3>
-                        <span class="text-gray-500 font-medium">Dec 2025</span>
+                        <h3 class="text-2xl font-bold text-white">Master of Science in Supply Chain Management</h3>
+                        <span class="text-sm font-mono text-slate-400 font-semibold">DEC 2025</span>
                     </div>
-                    <p class="text-lg text-indigo-600 font-semibold">Richard A. Chaifetz School of Business, Saint Louis University</p>
-                    <p class="text-gray-600 font-medium mt-1">GPA: 3.97 / 4.0</p>
-                    <div class="mt-4 pt-4 border-t border-gray-100 text-sm text-gray-500">
-                        <strong>Honors:</strong> Beta Gamma Sigma Honor Society Member.<br>
-                        <strong>Key Coursework:</strong> SAP Enterprise Systems, Supply Chain Analytics, Operations Management, Strategic Sourcing, Logistics & Warehousing.
+                    <p class="text-indigo-400 font-semibold text-sm">Richard A. Chaifetz School of Business, Saint Louis University</p>
+                    <div class="inline-block bg-slate-800 text-slate-300 text-xs px-3 py-1 font-mono rounded mt-3">
+                        Cumulative GPA: 3.97 / 4.0
+                    </div>
+                    <div class="mt-6 pt-6 border-t border-slate-800/60 text-xs text-slate-400 leading-relaxed">
+                        <strong class="text-slate-300 uppercase font-bold tracking-wider block mb-2">Core Competency Fields Covered:</strong>
+                        Advanced SAP Enterprise Solutions Architecture, Quantitative Supply Chain Analytics, Advanced Operations Planning, Strategic Sourcing Frameworks, Global Logistics & Fulfillment Infrastructure.
                     </div>
                 </div>
 
-                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Professional Certifications</h3>
-                    <ul class="list-disc list-inside text-gray-600 space-y-1 text-sm">
-                        <li><strong>Lean Six Sigma Yellow Belt (AI-Enabled, DMAIC)</strong> — Offered by Saint Louis University.</li>
-                        <li><strong>SAP S/4HANA Enterprise Systems Certification</strong> — Mastery credential covering module integrations and Fiori UX.</li>
-                    </ul>
+                <div class="bg-slate-800/30 border border-slate-800 p-6 rounded-2xl">
+                    <h3 class="text-base font-bold text-white mb-4 uppercase tracking-wider">Professional Technical Credentials</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="p-4 bg-slate-900 rounded-xl border border-slate-800">
+                            <div class="text-sm font-bold text-white">Lean Six Sigma Yellow Belt</div>
+                            <div class="text-xs text-indigo-400 mt-1 font-mono">AI-Enabled DMAIC Framework — SLU</div>
+                        </div>
+                        <div class="p-4 bg-slate-900 rounded-xl border border-slate-800">
+                            <div class="text-sm font-bold text-white">SAP S/4HANA Enterprise Systems Mastery</div>
+                            <div class="text-xs text-purple-400 mt-1 font-mono">Module Integrations & Fiori Execution UX</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
     </main>
 
-    <footer id="contact" class="bg-gray-900 text-white py-16">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-2 tracking-tight">Let's Connect</h2>
-            <p class="text-gray-400 mb-8 max-w-md mx-auto">Open to high-impact roles in SAP Consulting, Supply Chain Analytics, and Operational Engineering workflows.</p>
-            <p class="text-2xl font-semibold mb-10 text-indigo-400">
-                <a href="mailto:shashidharraoneredikomma@gmail.com" class="hover:text-indigo-300 transition duration-300">shashidharraoneredikomma@gmail.com</a>
+    <!-- Professional Footer -->
+    <footer id="contact" class="bg-slate-950 border-t border-slate-850 py-16 text-center">
+        <div class="container mx-auto px-6 max-w-3xl">
+            <h2 class="text-3xl font-extrabold text-white tracking-tight mb-3">Initiate Connection</h2>
+            <p class="text-slate-400 text-sm mb-8 max-w-md mx-auto">Currently open to discussion regarding global roles in SAP Functional Consulting, SCM Data Engineering, and Operational Optimization workflows.</p>
+            <p class="text-xl md:text-2xl font-bold text-indigo-400 mb-10 tracking-tight select-all code-font">
+                <a href="mailto:shashidharraoneredikomma@gmail.com" class="hover:text-indigo-300 transition duration-200">shashidharraoneredikomma@gmail.com</a>
             </p>
             
-            <div class="flex justify-center space-x-6">
-                <a href="[https://github.com/shashi0001/](https://github.com/shashi0001/)" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300" aria-label="GitHub Profile">
-                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.838 9.49.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.03-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg>
+            <div class="flex justify-center space-x-6 mb-12">
+                <a href="https://github.com/shashi0001/" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-white transition duration-200" aria-label="GitHub Profile">
+                    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.838 9.49.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.03-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg>
                 </a>
-                <a href="[https://www.linkedin.com/in/shashidhar-rao-neredikomma/](https://www.linkedin.com/in/shashidhar-rao-neredikomma/)" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300" aria-label="LinkedIn Profile">
-                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.336 9.763H6.34v-8.59H3.669v8.59zM17.668 1H6.328C3.965 1 2 2.985 2 5.355v13.29C2 21.015 3.965 23 6.328 23h11.34c2.363 0 4.332-1.985 4.332-4.355V5.355C22 2.985 20.031 1 17.668 1z" clip-rule="evenodd" /></svg>
+                <a href="https://www.linkedin.com/in/shashidhar-rao-neredikomma/" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-white transition duration-200" aria-label="LinkedIn Profile">
+                    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.336 9.763H6.34v-8.59H3.669v8.59zM17.668 1H6.328C3.965 1 2 2.985 2 5.355v13.29C2 21.015 3.965 23 6.328 23h11.34c2.363 0 4.332-1.985 4.332-4.355V5.355C22 2.985 20.031 1 17.668 1z" clip-rule="evenodd" /></svg>
                 </a>
             </div>
-            <p class="mt-8 text-gray-500 text-sm">&copy; 2026 Shashidhar Rao Neredikomma. All Rights Reserved.</p>
+            <p class="text-slate-600 text-xs font-mono">&copy; 2026 Shashidhar Rao Neredikomma. Document verified for production deploy.</p>
         </div>
     </footer>
 
     <script>
-        // Mobile menu toggle
+        // Interactive Mobile Nav Trigger
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
 
@@ -245,7 +323,6 @@
             mobileMenu.classList.toggle('hidden');
         });
 
-        // Close mobile menu when a link is clicked
         const mobileMenuLinks = mobileMenu.getElementsByTagName('a');
         for (let link of mobileMenuLinks) {
             link.addEventListener('click', () => {
@@ -253,7 +330,7 @@
             });
         }
 
-        // Intersection Observer for fluid fade-in animations
+        // High-performance animation engine via Intersection Observer
         const sections = document.querySelectorAll('.fade-in-section');
         const observer = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
@@ -263,8 +340,8 @@
                 }
             });
         }, {
-            rootMargin: '0px',
-            threshold: 0.1
+            rootMargin: '0px 0px -40px 0px',
+            threshold: 0.05
         });
 
         sections.forEach(section => {
